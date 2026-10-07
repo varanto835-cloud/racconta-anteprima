@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Racconta — parla, il resto arriva pubblicato · BobImpakt</title>
+<meta name="description" content="Racconta è il plugin WordPress con un'app per il telefono: registri una nota vocale come parleresti a un collega, la redazione la trascrive e la trasforma in articoli, post e revisioni del tuo sito. Pensalo, dillo, fatto.">
+<meta property="og:title" content="Racconta — parla, il resto arriva pubblicato">
+<meta property="og:description" content="Il plugin WordPress che trasforma la tua voce in contenuti pubblicati. Pensalo, dillo, fatto.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://varanto835-cloud.github.io/racconta-anteprima/">
+<meta property="og:image" content="https://varanto835-cloud.github.io/racconta-anteprima/assets/img/og-racconta.png">
+<meta property="og:locale" content="it_IT">
+<meta name="theme-color" content="#d9dbd6">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/archivo-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/racconta.css">
+</head>
+<body>
+<a class="salta" href="#come-funziona">Salta al contenuto</a>
+
+<!-- ============ PONTE DEI METER (primo viewport) ============ -->
+<header class="ponte" id="inizio">
+  <div class="ponte__riga">
+    <a class="marchio" href="https://bobimpakt.it/" aria-label="BobImpakt, pagina iniziale">
+      <!-- LOGO: quando arriva il file, sostituire la scritta con <img src="assets/img/logo-bobimpakt.svg" alt="BobImpakt" height="28"> -->
+      <span class="marchio__nome">BobImpakt</span>
+      <span class="marchio__sotto">presenta</span>
+    </a>
+
+    <div class="lampada" id="lampada" aria-live="polite">
+      <span class="lampada__vetro"><span class="lampada__testo">In onda</span></span>
+      <span class="lampada__targa">Racconta <b class="vers">1.2</b></span>
+    </div>
+
+    <div class="meters" aria-hidden="true">
+      <figure class="vu" id="vu-sx">
+        <svg class="vu__quadrante" viewBox="0 0 200 120" role="img" aria-label="VU meter sinistro">
+          <path class="vu__arco" d="M 23.4 85.7 A 100 100 0 0 1 176.6 85.7"/>
+          <path class="vu__arco vu__arco--rosso" d="M 146.9 61.7 A 100 100 0 0 1 176.6 85.7"/>
+          <g class="vu__tacche"></g>
+          <text class="vu__num" x="16" y="80">-20</text><text class="vu__num" x="53" y="50">-10</text><text class="vu__num" x="85" y="37">-5</text><text class="vu__num" x="153" y="50">0</text><text class="vu__num" x="186" y="80">+3</text>
+          <text class="vu__num vu__num--vu" x="100" y="118">VU</text>
+          <line class="vu__ago" x1="100" y1="150" x2="100" y2="56"/>
+          <rect class="vu__perno" x="88" y="121" width="24" height="6" rx="2"/>
+        </svg>
+        <figcaption class="vu__eti">Voce</figcaption>
+      </figure>
+      <figure class="vu" id="vu-dx">
+        <svg class="vu__quadrante" viewBox="0 0 200 120" role="img" aria-label="VU meter destro">
+          <path class="vu__arco" d="M 23.4 85.7 A 100 100 0 0 1 176.6 85.7"/>
+          <path class="vu__arco vu__arco--rosso" d="M 146.9 61.7 A 100 100 0 0 1 176.6 85.7"/>
+          <g class="vu__tacche"></g>
+          <text class="vu__num" x="16" y="80">-20</text><text class="vu__num" x="53" y="50">-10</text><text class="vu__num" x="85" y="37">-5</text><text class="vu__num" x="153" y="50">0</text><text class="vu__num" x="186" y="80">+3</text>
+          <text class="vu__num vu__num--vu" x="100" y="118">VU</text>
+          <line class="vu__ago" x1="100" y1="150" x2="100" y2="56"/>
+          <rect class="vu__perno" x="88" y="121" width="24" height="6" rx="2"/>
+        </svg>
+        <figcaption class="vu__eti">Redazione</figcaption>
+      </figure>
+    </div>
+
+    <a class="tasto tasto--rosso tasto--ponte" href="#talkback">Chiedi Racconta</a>
+  </div>
+
+  <div class="ponte__titolo">
+    <div class="ponte__sinistra">
+      <h1 class="titolo">Parla.<br>Il resto arriva pubblicato.</h1>
+      <p class="motto">Pensalo, dillo, fatto.</p>
+    </div>
+    <p class="sommario">Racconta è il plugin WordPress con un'app per il telefono. Registri una nota vocale come parleresti a un collega: un caso, un numero, un errore, un'idea. La redazione la trascrive e la trasforma in articoli, post e revisioni del tuo sito. Tu non scrivi una riga.</p>
+    <a class="tasto tasto--rosso tasto--ponte-mobile" href="#talkback">Chiedi Racconta</a>
+  </div>
+</header>
+
+<!-- ============ SCALA DELLE FREQUENZE (navigazione) ============ -->
+<nav class="scala" id="scala" aria-label="Sezioni della pagina">
+  <div class="scala__corpo">
+    <div class="scala__tacche" aria-hidden="true"></div>
+    <ol class="scala__stazioni">
+      <li><a href="#come-funziona" data-stazione><span class="scala__freq">88.0</span><span class="scala__nome">Come funziona</span></a></li>
+      <li><a href="#revisione" data-stazione><span class="scala__freq">91.5</span><span class="scala__nome">Revisione a voce</span></a></li>
+      <li><a href="#persone" data-stazione><span class="scala__freq">95.0</span><span class="scala__nome">Persone</span></a></li>
+      <li><a href="#dietro" data-stazione><span class="scala__freq">101.0</span><span class="scala__nome">Chi c'è dietro</span></a></li>
+      <li><a href="#chiedilo" data-stazione><span class="scala__freq">104.5</span><span class="scala__nome">Chiedilo</span></a></li>
+    </ol>
+    <span class="scala__ago" id="ago" aria-hidden="true"></span>
+  </div>
+</nav>
+
+<main>
+<!-- ============ TRE CANALI: PENSALO · DILLO · FATTO ============ -->
+<section class="canali" aria-label="I tre passi">
+  <ol class="canali__lista">
+    <li class="canale canale--giallo">
+      <div class="fader" aria-hidden="true"><span class="fader__corsa"><span class="fader__cappuccio" style="--livello: 40%"></span></span></div>
+      <div class="canale__testo">
+        <h2 class="canale__nome"><span class="canale__passo">1</span>Pensalo</h2>
+        <p>Ti viene in mente un caso, un numero, un errore. Non ti metti a scrivere: apri Racconta sul telefono e premi <b>Registra</b>.</p>
+      </div>
+    </li>
+    <li class="canale canale--rosso">
+      <div class="fader" aria-hidden="true"><span class="fader__corsa"><span class="fader__cappuccio" style="--livello: 65%"></span></span></div>
+      <div class="canale__testo">
+        <h2 class="canale__nome"><span class="canale__passo">2</span>Dillo</h2>
+        <p>Parli come parleresti a un collega, anche tre o quattro minuti. Se ti interrompono, Pausa. Puoi aggiungere due righe o un file. Poi <b>Invia</b>.</p>
+      </div>
+    </li>
+    <li class="canale canale--verde">
+      <div class="fader" aria-hidden="true"><span class="fader__corsa"><span class="fader__cappuccio" style="--livello: 100%"></span></span></div>
+      <div class="canale__testo">
+        <h2 class="canale__nome"><span class="canale__passo">3</span>Fatto</h2>
+        <p>La redazione trascrive, scrive e impagina. Il tuo racconto torna come articolo, post o sezione «la mia esperienza» sul tuo sito. Tu rileggi e approvi.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ TALKBACK (richiesta) ============ -->
+<section class="talkback" id="talkback" aria-labelledby="talkback-titolo">
+  <div class="talkback__testa">
+    <h2 id="talkback-titolo" class="talkback__titolo">Talkback</h2>
+    <p class="talkback__sotto">Racconta non si compra da un carrello: si chiede. Lasciami tre righe e ti richiamo io, oppure scrivimi su WhatsApp.</p>
+  </div>
+  <form class="modulo" id="modulo" method="post" action="#talkback" novalidate data-anteprima="1">
+    <div class="modulo__campo">
+      <label for="nome">Nome e cognome</label>
+      <input id="nome" name="nome" type="text" autocomplete="name" required maxlength="120" placeholder="Es. Maria Rossi">
+    </div>
+    <div class="modulo__campo">
+      <label for="sito">Il tuo sito</label>
+      <input id="sito" name="sito" type="text" inputmode="url" autocomplete="url" required maxlength="200" placeholder="Es. studiorossi.it">
+    </div>
+    <div class="modulo__campo">
+      <label for="telefono">Telefono <span class="modulo__nota">(per WhatsApp)</span></label>
+      <input id="telefono" name="telefono" type="tel" autocomplete="tel" required maxlength="40" placeholder="Es. 333 123 4567">
+    </div>
+    <div class="modulo__campo modulo__campo--largo">
+      <label for="interesse">Cosa ti interessa di più</label>
+      <select id="interesse" name="interesse">
+        <option value="racconta">Raccontare e pubblicare</option>
+        <option value="revisione">Revisionare a voce gli articoli che ho già</option>
+        <option value="persone">Raccogliere la voce di clienti e colleghi</option>
+        <option value="tutto">Tutte e tre le cose</option>
+      </select>
+    </div>
+    <p class="modulo__honey" aria-hidden="true"><label>Lascia vuoto <input type="text" name="azienda" tabindex="-1" autocomplete="off"></label></p>
+    <div class="modulo__consenso">
+      <input id="consenso" name="consenso" type="checkbox" required value="1">
+      <label for="consenso">Ho letto <a href="#privacy">come uso questi dati</a>: solo per richiamarti su Racconta.</label>
+    </div>
+    <div class="modulo__campo modulo__campo--azione">
+      <button class="tasto tasto--rosso" type="submit" id="invia"><span class="tasto__spia" aria-hidden="true"></span>Chiedi Racconta</button>
+    </div>
+    <div class="modulo__azioni">
+      <a class="tasto tasto--whatsapp" id="whatsapp" href="https://wa.me/39XXXXXXXXXX?text=Ciao%20Roberto%2C%20vorrei%20sapere%20di%20pi%C3%B9%20su%20Racconta" target="_blank" rel="noopener" data-numero="39XXXXXXXXXX">
+        <svg class="tasto__icona" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.9-1.3A9.5 9.5 0 1 0 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 7.8c.2-.4.5-.4.8-.4h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.5.7c-.2.2-.3.4-.1.7a7 7 0 0 0 3.4 3.1c.3.1.5.1.7-.1l.8-1c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.2.4.5a2.3 2.3 0 0 1-1.6 2.1c-.6.2-1.3.2-2-.1A11.6 11.6 0 0 1 8.4 11c-.4-.8-.5-1.5-.3-2.2.1-.4.3-.8.5-1z" fill="currentColor"/></svg>
+        Scrivimi su WhatsApp
+      </a>
+    </div>
+    <p class="modulo__esito" id="esito" role="status" aria-live="polite" hidden></p>
+  </form>
+</section>
+
+<!-- ============ 88.0 · COME FUNZIONA ============ -->
+<section class="stazione" id="come-funziona" aria-labelledby="t-come">
+  <header class="stazione__testa">
+    <p class="stazione__freq" aria-hidden="true">88.0</p>
+    <h2 id="t-come" class="stazione__titolo">Come funziona</h2>
+    <p class="stazione__sotto">Una registrazione, dall'inizio alla fine. I testi qui sotto sono un esempio: l'interfaccia è quella vera dell'app.</p>
+  </header>
+
+  <div class="log">
+    <article class="log__voce">
+      <h3 class="log__eti">Sul telefono</h3>
+      <div class="app" role="img" aria-label="L'app Racconta sul telefono: campo «Di cosa parla», timer 03:42, pulsanti Registra, Pausa, Stop e Invia">
+        <p class="app__saluto">Ciao Maria</p>
+        <p class="app__sotto">Racconta per <b>studiorossi.it</b> · parla come parleresti a un collega: un caso, un numero, un errore, un'idea.</p>
+        <p class="app__eti">Di cosa parla?</p>
+        <p class="app__campo">Il cliente che pensava fosse colpa di Google</p>
+        <p class="app__timer">03:42</p>
+        <p class="app__tasto app__tasto--giallo"><svg class="app__icona" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5"/></svg>Registra</p>
+        <div class="app__due"><p class="app__tasto app__tasto--grigio"><svg class="app__icona" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2.5" width="3.5" height="11" rx=".8"/><rect x="9.5" y="2.5" width="3.5" height="11" rx=".8"/></svg>Pausa</p><p class="app__tasto app__tasto--rosso"><svg class="app__icona" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="3" width="10" height="10" rx="1.2"/></svg>Stop</p></div>
+        <p class="app__stato">Registrazione pronta: 03:42 (1,1 MB). Riascolta se vuoi, poi Invia.</p>
+        <p class="app__tasto app__tasto--verde">Invia</p>
+      </div>
+      <p class="log__nota">Nessun login, nessun limite di tempo, lo schermo resta acceso. Se ti interrompono premi Pausa.</p>
+    </article>
+
+    <article class="log__voce">
+      <h3 class="log__eti">In redazione</h3>
+      <table class="registro">
+        <caption class="registro__cap">Registro degli invii <span class="registro__esempio">esempio</span></caption>
+        <thead><tr><th scope="col">Ora</th><th scope="col">Tipo</th><th scope="col">Contenuto</th><th scope="col">Esito</th></tr></thead>
+        <tbody>
+          <tr><td data-eti="Ora">09:14</td><td data-eti="Tipo">audio</td><td data-eti="Contenuto">nota-vocale.webm · 03:42 · 1,1 MB</td><td data-eti="Esito"><span class="ok">trascritto</span></td></tr>
+          <tr><td data-eti="Ora">09:15</td><td data-eti="Tipo">testo</td><td data-eti="Contenuto">«Il cliente che pensava fosse colpa di Google»</td><td data-eti="Esito"><span class="ok">in Esperienze</span></td></tr>
+          <tr><td data-eti="Ora">09:15</td><td data-eti="Tipo">file</td><td data-eti="Contenuto">report-aprile.pdf · 2 pagine lette</td><td data-eti="Esito"><span class="ok">in Esperienze</span></td></tr>
+        </tbody>
+      </table>
+      <blockquote class="trascrizione">
+        <p class="trascrizione__eti">Inizio della trascrizione</p>
+        <p>«Allora, questo è un caso di due anni fa. Il cliente era convinto che il calo fosse colpa di Google, un aggiornamento, qualcosa. Guardo i dati e il calo partiva da un giorno preciso: il giorno in cui avevano cambiato il modulo di contatto…»</p>
+      </blockquote>
+    </article>
+
+    <article class="log__voce">
+      <h3 class="log__eti">Sul tuo sito</h3>
+      <ul class="uscite">
+        <li><b>Un articolo</b> che solo tu potevi scrivere, con la sezione «Alcune considerazioni secondo la mia esperienza».</li>
+        <li><b>Tre o quattro post</b> per LinkedIn, Facebook o Instagram, con il caso, il numero, l'errore.</li>
+        <li><b>Una bozza</b> nel tuo WordPress: rileggi, cambi quello che vuoi, pubblichi tu.</li>
+      </ul>
+      <div class="targa">
+        <p class="targa__titolo">Cosa non fa</p>
+        <p>Non legge il tuo sito. Non traccia i visitatori. Non installa nulla nelle pagine. Manda alla redazione solo ciò che decidi di mandare tu, quando premi Invia.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 91.5 · REVISIONE A VOCE ============ -->
+<section class="stazione stazione--scura" id="revisione" aria-labelledby="t-rev">
+  <header class="stazione__testa">
+    <p class="stazione__freq" aria-hidden="true">91.5</p>
+    <h2 id="t-rev" class="stazione__titolo">Revisione a voce</h2>
+    <p class="stazione__sotto">Hai un articolo pubblicato da sistemare? Lo leggi con i paragrafi numerati e detti le modifiche. L'AI applica <b>solo</b> quelle: niente «miglioramenti» non richiesti, niente correzioni che non hai nominato. L'originale non viene toccato: nasce una nuova bozza.</p>
+  </header>
+
+  <div class="rev">
+    <div class="rev__articolo">
+      <p class="rev__eti">Articolo numerato <span class="registro__esempio">esempio</span></p>
+      <p><span class="par">[1]</span> Il rimborso delle spese sanitarie va chiesto con la ricevuta originale e il codice fiscale del paziente.</p>
+      <p><span class="par">[2]</span> La pratica viene lavorata entro 30 giorni dalla ricezione.</p>
+      <p><span class="par">[3]</span> In caso di dubbi, scrivete alla segreteria in orario d'ufficio.</p>
+    </div>
+    <div class="rev__dettato">
+      <p class="rev__eti">Cosa hai detto</p>
+      <p class="dettato">«Nel paragrafo due sostituisci <q>entro 30 giorni</q> con <q>entro 60 giorni</q>. Elimina il paragrafo tre. E poi… rendilo più chiaro.»</p>
+    </div>
+    <div class="rev__risultato">
+      <p class="rev__eti">Cosa ha fatto l'AI</p>
+      <ul class="modifiche">
+        <li><span class="mod mod--sost">sostituzione</span> paragrafo 2: <del>entro 30 giorni</del> <ins>entro 60 giorni</ins></li>
+        <li><span class="mod mod--elim">eliminazione</span> paragrafo 3: <del>In caso di dubbi, scrivete alla segreteria in orario d'ufficio.</del></li>
+        <li><span class="mod mod--no">non applicata</span> «rendilo più chiaro»: istruzione ambigua, non indovino. Dimmi cosa cambiare e dove.</li>
+      </ul>
+      <p class="rev__nota">Il risultato è una <b>nuova bozza</b>. Tutto il resto è identico, carattere per carattere.</p>
+    </div>
+  </div>
+
+  <ul class="punti">
+    <li>Si parte dall'elenco articoli, dalla schermata di modifica o dall'app sul telefono.</li>
+    <li>Detti come un correttore di bozze: «sostituisci», «elimina», «riscrivi il paragrafo 4 così», «dopo la frase… aggiungi».</li>
+    <li>Ciò che è ambiguo viene segnalato, non interpretato.</li>
+  </ul>
+</section>
+
+<!-- ============ 95.0 · PERSONE ============ -->
+<section class="stazione" id="persone" aria-labelledby="t-per">
+  <header class="stazione__testa">
+    <p class="stazione__freq" aria-hidden="true">95.0</p>
+    <h2 id="t-per" class="stazione__titolo">Persone</h2>
+    <p class="stazione__sotto">La voce buona non è solo la tua. A un collega, a un cliente, a un fornitore puoi dare la sua app Racconta e chiedergli: «cosa ne pensi di questo articolo? raccontami una tua esperienza». Risponde a voce dal telefono, anche quattro minuti, e la risposta arriva in redazione con il suo nome.</p>
+  </header>
+
+  <div class="persone">
+    <div class="app app--scheda" role="img" aria-label="L'app di una persona invitata: la scheda con l'articolo, la domanda e il pulsante Rispondi a voce">
+      <p class="app__saluto">Ciao Giulia <span class="registro__esempio">esempio</span></p>
+      <p class="app__sotto"><b>Ti chiedono un parere</b> su 1 articolo: scegli, premi «Rispondi a voce» e racconta.</p>
+      <div class="scheda">
+        <p class="scheda__titolo">Perché il preventivo non basta: cosa chiedere prima di firmare</p>
+        <p class="scheda__leggi">Leggi l'articolo qui, senza uscire dall'app</p>
+        <p class="scheda__domanda">«Cosa ne pensi di questo articolo? Raccontami una tua esperienza in merito: un caso, un cliente, un errore. Parla come parleresti a un collega, anche 3-4 minuti.»</p>
+        <p class="app__tasto app__tasto--giallo">Rispondi a voce</p>
+      </div>
+    </div>
+    <ul class="persone__punti">
+      <li><b>Un link per persona</b>, con il suo nome e il suo sito. Niente account, niente password: si apre e si aggiunge alla schermata Home.</li>
+      <li><b>L'articolo si legge dentro l'app</b>, mentre si registra. Pausa e Riprendi, nessun taglio.</li>
+      <li><b>Tu vedi quando ha risposto</b>, con la durata e l'inizio della trascrizione. Il link si revoca in un clic.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 101.0 · CHI C'È DIETRO ============ -->
+<section class="stazione stazione--scura" id="dietro" aria-labelledby="t-die">
+  <header class="stazione__testa">
+    <p class="stazione__freq" aria-hidden="true">101.0</p>
+    <h2 id="t-die" class="stazione__titolo">Chi c'è dietro</h2>
+  </header>
+  <div class="dietro">
+    <p class="dietro__testo">Racconta è sviluppato da <b>Roberto Varriale</b>, consulente SEO, con la redazione <b>ConSEOlente</b>, e distribuito da <b>BobImpakt</b>. Dietro il microfono non c'è un robot: il tuo materiale arriva nel foglio di lavoro della redazione, viene trascritto, letto e trasformato da persone, con l'aiuto dell'AI solo dove serve, e sempre con te che approvi prima di pubblicare.</p>
+    <ol class="percorso" aria-label="Il percorso del materiale in redazione">
+      <li><b>Esperienze</b><span>il tuo racconto, trascritto</span></li>
+      <li><b>Idee</b><span>articoli e post che solo tu puoi scrivere</span></li>
+      <li><b>Testi</b><span>scritti con i tuoi casi e i tuoi numeri</span></li>
+      <li><b>Bozza</b><span>nel tuo WordPress, da approvare</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 104.5 · CHIEDILO ============ -->
+<section class="stazione" id="chiedilo" aria-labelledby="t-chi">
+  <header class="stazione__testa">
+    <p class="stazione__freq" aria-hidden="true">104.5</p>
+    <h2 id="t-chi" class="stazione__titolo">Chiedilo</h2>
+    <p class="stazione__sotto">Le domande che mi fanno sempre, con le risposte vere.</p>
+  </header>
+  <dl class="domande">
+    <div><dt>Quanto costa?</dt><dd>Non c'è un listino sul sito: Racconta arriva insieme al lavoro di redazione, e ne parliamo a voce in base a quanto vuoi pubblicare. Chiedimelo dal talkback o su WhatsApp.</dd></div>
+    <div><dt>Funziona sul mio sito?</dt><dd>Se il sito è WordPress, sì. Il plugin lo installa la redazione; tu trovi la voce «Racconta» nel pannello e il link dell'app per il telefono.</dd></div>
+    <div><dt>Devo imparare qualcosa?</dt><dd>No. Un microfono, un cestino per i file, un pulsante Invia. Niente login da ricordare: il link dell'app è personale.</dd></div>
+    <div><dt>Posso parlare dieci minuti?</dt><dd>Sì. Non c'è limite di durata, c'è la Pausa, e la registrazione non viene tagliata. Quattro minuti pesano da uno a quattro MB.</dd></div>
+    <div><dt>E i miei dati?</dt><dd>Il plugin non legge il tuo sito e non traccia nessuno. Manda alla redazione solo ciò che registri, scrivi o alleghi tu, quando premi Invia. Il link dell'app si può rigenerare in qualsiasi momento.</dd></div>
+    <div><dt>L'AI riscrive quello che dico?</dt><dd>No. Nella revisione a voce applica esclusivamente le modifiche che detti e segnala quelle ambigue. Nei testi nuovi lavora la redazione, con i tuoi casi e i tuoi numeri, e pubblichi tu.</dd></div>
+  </dl>
+  <p class="chiedilo__azione"><a class="tasto tasto--rosso" href="#talkback">Torna al talkback</a></p>
+</section>
+</main>
+
+<footer class="piede" id="privacy">
+  <div class="piede__riga">
+    <p class="piede__motto">Pensalo, dillo, fatto.</p>
+    <p class="piede__firma"><b>BobImpakt</b> · Racconta è sviluppato da Roberto Varriale, ConSEOlente.</p>
+  </div>
+  <div class="piede__privacy">
+    <h2 class="piede__titolo">Come uso i dati del talkback</h2>
+    <p>Nome, sito e telefono servono solo a richiamarti per parlare di Racconta. Non vengono ceduti a nessuno, non finiscono in liste, e vengono cancellati quando me lo chiedi. Titolare del trattamento: Roberto Varriale, BobImpakt <span class="da-completare" title="da completare prima della pubblicazione">[indirizzo e email da inserire]</span>. Per cancellare o correggere i tuoi dati scrivi allo stesso indirizzo.</p>
+  </div>
+</footer>
+
+<script src="assets/js/racconta.js" defer></script>
+</body>
+</html>

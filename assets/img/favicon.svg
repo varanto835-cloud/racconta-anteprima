@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- La lampada IN ONDA della console: smalto grigio, vetro rosso, scritta chiara. -->
+  <rect width="64" height="64" rx="12" fill="#d9dbd6"/>
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="none" stroke="#9ea39b" stroke-width="2"/>
+  <rect x="9" y="19" width="46" height="26" rx="4" fill="#d9342b" stroke="#7a1a14" stroke-width="2.5"/>
+  <rect x="12" y="22" width="40" height="8" rx="3" fill="#fff" opacity=".22"/>
+  <text x="32" y="38" text-anchor="middle" font-family="Archivo, Arial Narrow, Arial, sans-serif" font-weight="800" font-size="12" letter-spacing="1.5" fill="#fff">ONDA</text>
+  <circle cx="9" cy="9" r="2.5" fill="#8a8e86"/><circle cx="55" cy="9" r="2.5" fill="#8a8e86"/><circle cx="9" cy="55" r="2.5" fill="#8a8e86"/><circle cx="55" cy="55" r="2.5" fill="#8a8e86"/>
+</svg>
