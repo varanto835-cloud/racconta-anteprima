@@ -101,17 +101,17 @@
     }, { threshold: .55 }).observe($('.problema__testo', problema));
   }
 
-  /* ---------- i moduli «Scarica l'App» ---------- */
-  var MSG_OK = 'Ricevuto! Ti mando il link dell\'app su WhatsApp: lo apri e lo aggiungi alla schermata Home.';
-  var MSG_ANTEPRIMA = 'Questa è un\'anteprima: qui la richiesta partirebbe e riceveresti il link su WhatsApp. Il modulo funziona quando il sito è online su bobimpakt.it.';
+  /* ---------- i moduli «Richiedi la demo gratis» ---------- */
+  var MSG_OK = 'Ricevuto! Ti scrivo su WhatsApp per la tua demo gratis.';
+  var MSG_ANTEPRIMA = 'Questa è un\'anteprima: qui la richiesta partirebbe e ti scriverei su WhatsApp per la demo. Il modulo funziona quando il sito è online su bobimpakt.it.';
   $$('form[data-modulo]').forEach(function (modulo) {
     var esito = $('.modulo__esito', modulo), nome = $('input[name="nome"]', modulo), tel = $('input[name="telefono"]', modulo), consenso = $('input[name="consenso"]', modulo);
     function mostra(testo, tipo) { esito.hidden = false; esito.textContent = testo; esito.className = 'modulo__esito' + (tipo ? ' is-' + tipo : ''); }
     function controlla() {
       var mancano = [];
       [nome, tel].forEach(function (c) { var vuoto = !String(c.value || '').trim(); c.classList.toggle('is-errato', vuoto); if (vuoto) mancano.push(c); });
-      if (mancano.length) { mostra('Scrivi il tuo nome e il numero WhatsApp: è lì che ti mando il link.', 'errore'); mancano[0].focus(); return false; }
-      if (!consenso.checked) { mostra('Manca la spunta sull\'uso dei dati: serve per poterti mandare il link.', 'errore'); consenso.focus(); return false; }
+      if (mancano.length) { mostra('Scrivi il tuo nome e il numero WhatsApp: è lì che ti scrivo per la demo.', 'errore'); mancano[0].focus(); return false; }
+      if (!consenso.checked) { mostra('Manca la spunta sull\'uso dei dati: serve per poterti contattare.', 'errore'); consenso.focus(); return false; }
       return true;
     }
     modulo.addEventListener('input', function (e) { if (e.target.classList) e.target.classList.remove('is-errato'); });
@@ -138,7 +138,7 @@
   /* ---------- WhatsApp: il numero si imposta in un punto solo (data-numero) ---------- */
   $$('a.whatsapp').forEach(function (wa) {
     var numero = (wa.getAttribute('data-numero') || '').replace(/\D/g, '');
-    var testo = encodeURIComponent('Ciao Roberto, vorrei l\'app gratis di BobImpakt.');
+    var testo = encodeURIComponent('Ciao Roberto, vorrei la demo gratis di BobImpakt.');
     if (numero.length >= 11) { wa.href = 'https://wa.me/' + numero + '?text=' + testo; return; }
     wa.title = 'Numero WhatsApp da impostare (data-numero)';
     wa.addEventListener('click', function (e) {

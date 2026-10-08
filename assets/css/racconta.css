@@ -74,7 +74,11 @@ main, .barra, .piede { position: relative; z-index: 1; }
 
 /* ---------- barra ---------- */
 .barra { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px var(--gutter); max-width: calc(var(--colonna) + 2 * var(--gutter)); margin: 0 auto; }
-.marchio { font-weight: 700; font-size: 1.375rem; letter-spacing: -.02em; color: var(--inchiostro); text-decoration: none; }
+/* il marchio: BobImpakt con il claim sotto, come un logo */
+.marchio { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; color: var(--inchiostro); text-decoration: none; }
+.marchio__nome { font-weight: 700; font-size: 1.375rem; line-height: 1.05; letter-spacing: -.02em; }
+.marchio__claim { font-weight: 500; font-size: .875rem; line-height: 1.2; letter-spacing: -.005em; color: var(--voce); }
+a.marchio:hover .marchio__nome { color: var(--inchiostro); }
 .barra__nav { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 32px); }
 .barra__nav a { color: var(--inchiostro-2); text-decoration: none; font-size: 1.0625rem; }
 .barra__nav a:hover { color: var(--inchiostro); }
@@ -191,8 +195,10 @@ ins { text-decoration: none; color: var(--inchiostro); background: linear-gradie
 
 /* ---------- piede ---------- */
 .piede { max-width: calc(var(--colonna) + 2 * var(--gutter)); margin: 0 auto; padding: clamp(2.5rem, 6vh, 4rem) var(--gutter) 3rem; color: var(--inchiostro-2); font-size: 1rem; }
-.piede__motto { font-size: clamp(1.6rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -.03em; color: var(--inchiostro); }
-.piede__firma { margin-top: .4rem; }
+.marchio--piede { margin: 0; gap: 3px; }
+.marchio--piede .marchio__nome { font-size: clamp(1.6rem, 3vw, 2.25rem); letter-spacing: -.03em; }
+.marchio--piede .marchio__claim { font-size: clamp(1rem, 1.4vw, 1.125rem); }
+.piede__firma { margin-top: .8rem; }
 .piede__privacy { margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid rgba(22, 25, 34, .14); max-width: 75ch; font-size: .9375rem; color: #554a44; }
 .piede__titolo { font-size: 1rem; font-weight: 650; color: var(--inchiostro); margin-bottom: .3rem; }
 .da-completare { background: #fff3c4; color: #5c4a00; padding: 0 .3em; border-radius: 4px; }
